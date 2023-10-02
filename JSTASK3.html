@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication and Divison</title>
+    <style>
+        body {
+            text-align: left;
+            border: 1px solid black;
+            width: 400px;
+            height: fit-content;
+            margin-left: 500px;
+            margin-top: 250px;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        div {
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .operation{
+           box-shadow :1px 1px 1px 1px rgb(85, 171, 211) ; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+        <form>
+            <h2>Multiplication And Division.</h2><br>
+            1st Number:   <input type="text" id="fno" name="firstno"><br><br>
+            2nd Number:  <input type="text" id="Sno" name="Secondno"><br><br>
+            <input type="button" onclick="multiplyBy()" value="Multiply" class="operation"><span>
+                <input type="button" onclick="divideBy()" value="Divide" class="operation"> </span><br>
+        </form>
+        <p >The Result is:<br>
+            <span id="result"></span>
+        </p>
+    </div>
+
+<script >
+
+function multiplyBy()
+{
+   num1 = document.getElementById("fno").value;
+   num2 = document.getElementById("Sno").value;
+   document.getElementById("result").innerHTML = num1 * num2;
+}
+
+function divideBy() 
+{ 
+   num1 = document.getElementById("fno").value;
+   num2 = document.getElementById("Sno").value;
+   document.getElementById("result").innerHTML = num1 / num2;
+} 
+</script>
+   
+
+</body>
+
+</html>

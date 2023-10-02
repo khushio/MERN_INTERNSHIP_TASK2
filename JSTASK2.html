@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort the string</title>
+</head>
+<body>
+    <body>
+        <div style="text-align: center; margin: auto; padding:50px; border:2px solid black; width: fit-content; height: fit-content;">
+     <p >
+        • Write a JavaScript function that returns a passed string with letters in
+        alphabetical order.<br>
+        Example string : 'webmaster’<br>
+        Expected Output : 'abeemrstw'<br>
+       <h2 style="text-decoration: underline;">Check in Console.</h2> 
+    </p>
+    </div>
+    </p>
+    <script>
+       var str1=prompt("Expected Input: ")
+        console.log("Expected String: "+str1);
+         function sortstr(str1){
+            return (((str1.split("")).sort()).join(""));
+        }
+        console.log("Expected Output: "+ sortstr(str1));
+        
+    </script>
+</body>
+</html>

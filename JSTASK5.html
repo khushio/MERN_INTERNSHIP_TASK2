@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form register</title>
+    <style>
+       .container{
+         
+        margin: auto;
+        border: 1px solid black;
+        width: 670px;
+        height: 500px;
+        background-color: rgb(234, 224, 224);
+     
+       }
+       form{
+        margin-top: 150px;
+        padding-right: 45px;
+       }
+       .Formfield span{
+        color: red;
+        font-weight: 100;
+       }
+      .Formfield.success input{
+        border-color: #09c372;
+      }
+      .Formfield.error input , .Formfield.error textarea {
+        border-color: #ff0234;
+      }
+   #submit
+      {
+        width: 150px;
+  padding: 7px;
+  border: 2px solid #d40b0b;
+  color: #fff;
+  background-color: #ff0000;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 3px;
+
+      }
+   
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <form action="#"  id="form" >
+        <h1 style="padding-left: 50px; text-align: center;">Registration Form</h1>
+       <table align="center">
+        <tr class="Formfield">
+            <th><label for="name">Name:</label></th>
+            <td><input type="text" id="name" name="Name"> <span ></span></td>
+        </tr>
+        <tr class="Formfield">
+            <th><label for="email">Email:</label></th>
+            <td><input type="email" id="email" name="Email"> <span></span></td>
+        </tr>
+        <tr class="Formfield">
+           <th> <label for="website">Website:</label></th>
+           <td> <input type="url" id="website" name="Website"> <span ></span></td>
+        </tr>
+        <tr class="Formfield">
+           <th> <label for="message" >Message:</label></th>
+          <td><textarea id="message" name="Message" ></textarea> <span > </span></td>
+    </tr>
+        <tr class="Formfield">
+           <td> <input type="submit" id="submit" value="Submit" style="position: relative; right: -100px; top: 20px;" ></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+    <script src="JS5.js">
+       
+
+    </script>
+</body>
+
+
+</html>

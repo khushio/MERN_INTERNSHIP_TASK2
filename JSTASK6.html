@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram login</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+        .container {
+
+            width: 400px;
+            height: 300px;
+
+            margin: auto;
+            position: relative;
+            top: 78px;
+            padding-left: 20px;
+        }
+
+        .container h1 {
+            position: relative;
+            top: 20px;
+
+        }
+
+        .form{
+            position: relative;
+            top: 40px;
+            left: 20px;
+            box-sizing: border-box;
+            border-radius: 1px;
+            box-shadow: 67px;
+            margin: auto;
+            border: 1px solid black;
+            width: 305px;
+            height: 275px;
+            background-color: rgb(206, 224, 228);
+        }
+
+        .formfield {
+            position: relative;
+            padding-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #submit {
+            width: 75%;
+            height: 35px;
+            background-color:rgb(42, 68, 238);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: larger;
+            font-weight: 100;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #pass,
+        #user {
+
+            width: 65%;
+            height: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 5px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 15px;
+            padding: 7px;
+            border: 1px solid lightgray;
+            border-radius:3px ;
+            background-color: lightgray;
+            color: black;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .formfield.error input,
+        .formfield.error i {
+            border-color: #f40025;
+            color: #f40025;
+        }
+
+        .formfield.formfield.error div {
+            color: #f40025;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="#"class="form" id="form">
+            <h1 align="center"><i>Instagram</i></h1>
+            <div class="formfield">
+                <i class="fa fa-user icon"></i>
+                <input type="text" placeholder="Username" id="user" name="Username"><br>
+               <div></div>
+            </div>
+            <div class="formfield">
+                <i class="fa fa-lock icon"></i>
+                <input type="password" placeholder="Password" id="pass" name="Password">
+               <div></div>
+            </div>
+            <div class="formfield"><input type="submit" value="Log in" id="submit"></div>
+            <div class="formfield"><input type="checkbox" id="check ">Remember me<span
+                    style="position: relative; left: 17px; "><a href="#" style=" text-decoration-line: none;"> Forget
+                        Password?</a></span></div>
+                    </form>
+        <div align="center" style="position: relative; top:50px ;left:15px;">Don't have an account! <a href="#"
+                style=" text-decoration-line: none;"> Sign up here</a></div>
+</body>
+</div>
+<script>
+    const form = document.getElementById("form");
+    const user = document.getElementById("user");
+    const pass = document.getElementById("pass");
+
+    String.prototype.isEmail = function () {
+        return !!this.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
+    };
+    String.prototype.isPassword = function () {
+        return !!this.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})*$/)
+    };
+    String.prototype.isUser = function () {
+        return !!this.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])*$/);
+    };
+
+    function getName(input) {
+        //return input.id;
+        return input.getAttribute("name");
+    }
+    function checkRequired(inputs) {
+        inputs.forEach((input) => {
+            if (input.value.trim() == "") {
+                //Error
+                errorInput(input, `This field is required `);
+            } else {
+                //Success
+                successInput(input);
+            }
+        });
+    }
+   
+    function errorInput(input, message) {
+        const formGroup = input.parentElement;
+        formGroup.className = "formfield error";
+        const div = formGroup.querySelector("div");
+        div.innerHTML = message;
+    }
+    function successInput(input) {
+        const formGroup = input.parentElement;
+        formGroup.className = "formfield success";
+        const div = formGroup.querySelector("div");
+        div.innerHTML = "";
+    }
+
+    function checkUser(input) {
+        if (!input.value.trim().isEmail) {
+            errorInput(input, `Enter the valid username`);
+        }
+
+        if (!input.value.trim().isUser()) {
+            errorInput(input, 'Enter the valid Username');
+        }
+    }
+    function checkPassword(input) {
+        if (!input.value.trim().isPassword) {
+            errorInput(input, 'Enter the valid Password');
+        }
+    }
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        checkRequired([user, pass]);
+        checkUser(user);
+        checkPassword(pass);
+    });
+
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Validation Form</title>
+    <style>
+        .container {
+            margin: auto;
+            border: 1px solid black;
+            background: linear-gradient(23deg, white, pink, yellow);
+            width: 780px;
+            height: 670px;
+
+        }
+        
+
+        .Formfield.error span {
+            color: #f53b57;
+            visibility: visible;
+        }
+
+        .Formfield.error input {
+            border-color: #f40025;
+        }
+        #submit {
+            width: 75%;
+            height: 35px;
+            background-color:red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: larger;
+            font-weight: 100;
+            color: white;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 align="center">Registration Form</h1>
+        <form action="#" id="form">
+            <table align="center">
+
+                <tr class="Formfield">
+                    <th><label for="firstname1">First Name:</label></th>
+                    <td><input type="text" size="61.8" name="firstname" id="firstname1" autocomplete="off"> <span> </span></td>
+                </tr>
+                <tr class="Formfield">
+                    <th><label for="lastname1">Last Name</label></th>
+                    <td><input type="text" size="61.8"  id="lastname1" autocomplete="off"> <span> </span>
+                    </td>
+                </tr>
+                <tr class="Formfield">
+                    <th><label for="email1">Email</label></th>
+                    <td><input type="email" size="61.8" name="email" id="email1" autocomplete="off"> <span> </span></td>
+                </tr>
+                <tr class="Formfield">
+                    <th>
+                        <lable for="password1">Password</lable>
+                    </th>
+                    <td><input type="password" size="61.8" name="password" id="password1"
+                            autocomplete="off"> <span></span></td>
+                </tr>
+                <tr class="Formfield">
+                    <th><label for="repassword1">Re-enter Password</label></th>
+                    <td><input type="password" size="61.8" name="repassword" id="repassword1"
+                            autocomplete="off"> <span></span></td>
+                </tr>
+                <tr class="Formfield">
+                    <th rowspan="2">Gender</th>
+                    <td><input type="radio" id="gender1" name="gender">Male <span>  </span></td>
+                </tr>
+
+                <tr class="Formfield">
+
+                    <td><input type="radio" id="gender2" name="gender">Female</td>
+                </tr>
+                <tr>
+                    <th><label for="age1"> Age:</label></th>
+                    <td><input type="text" size="61.8" name="age" id="age1" width="61.8px"
+                            autocomplete="off"><span></span></td>
+                </tr>
+                <tr class="Formfield">
+                    <th><label for="phoneNumber1">Phone Number</label> </th>
+                    <td><input type="tel" size="61.8" name="phoneNumber" id="phoneNumber1"
+                            autocomplete="off"><span></span></td>
+                </tr>
+                <tr class="Formfield">
+                    <th><label for="address1">Address</label></th>
+                    <td><textarea rows="20" cols="10" style="width: 437px; height: 89px; " id="address1" name="address"
+                            autocomplete="off"></textarea><span></span></td>
+                </tr>
+                <tr class="Formfield">
+                    <th>
+                        <lable for="state1">State</lable>
+                    </th>
+                    <td><input type="text" size="61.8" id="state1" name="state" autocomplete="off"><span></span></td>
+                </tr>
+                <tr class="Formfield">
+                    <th><label>Country</label></th>
+                    <td><select name="country" id="country1">
+                            <option value="">Choose your country</option>
+                            <option value="America">America</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="India">India</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Russia">Russia</option>
+                            <option value="UK">UK</option>
+                        </select><span></span></td>
+                </tr>
+                <tr class="Formfield">
+                    <th><label>Language Known</label> </th>
+                    <td><input type="checkbox" value="English" name="lang">English
+                        <input type="checkbox" value="Kannada" name="lang">Kannada
+                        <input type="checkbox" value="Hindi" name="lang">Hindi
+                        <input type="checkbox" value="Telugu" name="lang">Telugu
+                        <span></span>
+                    </td>
+                </tr>
+                <tr class="Formfield">
+                    <td colspan="2"> <input type="checkbox" id="Check">Hereby I declare all the given details are true.
+                    </td>
+                </tr>
+                <tr class="Formfield">
+                    <td colspan="2" align="right">Log to <a href="etthus.com">Ethnus</a> website</td>
+                </tr>
+                <tr>
+                    <td><button type="submit" id="submit" style="position: relative; left: 250px;">Register</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script src="JS8.js">
+
+    </script>
+
+
+</body>
+
+</html>

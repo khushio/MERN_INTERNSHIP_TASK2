@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dare and time</title>
+</head>
+
+<body>
+    <div style="margin: 40px; border:2px solid black;width:400px;height:100px; padding: 40px;
+    margin-left: 500px;">
+    
+        <form>
+           
+            <input type="button" id="date" onclick="" value="Show Date"><br>
+            <p id="date1"></p>
+            <input type="button" id="time" onclick="" value="Show Time"><br>
+            <p id="time1"></p>
+        </form>
+    </div>
+
+    <script>
+        const date = new Date();
+        const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let name = month[date.getMonth()];
+        let year = date.getFullYear();
+        let d = date.getDate();
+        let currentdate = d + "/" + name + "/" + year;
+        document.getElementById("date1").innerHTML = currentdate;
+        document.getElementById("time1").innerHTML = date;
+    </script>
+</body>
+
+</html>
